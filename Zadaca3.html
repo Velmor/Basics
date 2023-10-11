@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style>
+        img{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+    <script>
+        var counter=0
+        var pics=[]
+        var access=[]
+
+           function reveal1(that) {
+               var slika=document.createElement("img")
+               slika.setAttribute("src","blue.jpg")
+               var parent=that.parentNode
+               parent.removeChild(that)
+               parent.appendChild(slika)
+               counter++
+               if(counter<2){
+                  pics.push("blue")
+                   access.push(parent)
+               }
+               if(counter==2){
+                   pics.push("blue")
+                   var parentt={"parent":parent}
+                   access.push(parentt)
+                   check()
+               }
+           }
+           function reveal2(that) {
+               var slika=document.createElement("img")
+               slika.setAttribute("src","clock.png")
+               var parent=that.parentNode
+               parent.removeChild(that)
+               parent.appendChild(slika)
+               counter++
+               if(counter<2){
+                   pics.push("clock")
+                   access.push(that)
+               }else if(counter>=2){
+                   check(pics,access)
+               }
+           }
+           function reveal3(that) {
+               var slika=document.createElement("img")
+               slika.setAttribute("src","donut.jpg")
+               var parent=that.parentNode
+               parent.removeChild(that)
+               parent.appendChild(slika)
+               counter++
+               if(counter<2){
+                   pics.push("donut")
+                   access.push(that)
+               }else if(counter>=2){
+                   check(pics,access)
+               }
+           }
+           function reveal4(that) {
+               var slika=document.createElement("img")
+               slika.setAttribute("src","piano.jpg")
+               var parent=that.parentNode
+               parent.removeChild(that)
+               parent.appendChild(slika)
+               counter++
+               if(counter<2){
+                   pics.push("piano")
+                   access.push(that)
+               }else if(counter>=2){
+                   check(pics,access)
+               }
+           }
+           function reveal5(that) {
+               var slika=document.createElement("img")
+               slika.setAttribute("src","wheel.jpg")
+               var parent=that.parentNode
+               parent.removeChild(that)
+               parent.appendChild(slika)
+               counter++
+               if(counter<2){
+                   pics.push("wheel")
+                   access.push(that)
+               }else if(counter>=2){
+                   check(pics,access)
+               }
+           }
+           function reveal6(that) {
+               var slika=document.createElement("img")
+               slika.setAttribute("src","mouse.jpg")
+               var parent=that.parentNode
+               parent.removeChild(that)
+               parent.appendChild(slika)
+               counter++
+               if(counter<2){
+                   pics.push("mouse")
+                   access.push(that)
+               }else if(counter>=2){
+                   check(pics,access)
+               }
+           }
+           function reveal7(that) {
+               var slika=document.createElement("img")
+               slika.setAttribute("src","piano.jpg")
+               var parent=that.parentNode
+               parent.removeChild(that)
+               parent.appendChild(slika)
+               counter++
+               if(counter<2){
+                   pics.push("piano")
+                   access.push(that)
+               }else if(counter>=2){
+                   check(pics,access)
+               }
+           }
+           function reveal8(that) {
+               var slika=document.createElement("img")
+               slika.setAttribute("src","wheel.jpg")
+               var parent=that.parentNode
+               parent.removeChild(that)
+               parent.appendChild(slika)
+               counter++
+               if(counter<2){
+                   pics.push("wheel")
+                   access.push(that)
+               }else if(counter>=2){
+                   check(pics,access)
+               }
+           }
+           function reveal9(that) {
+               var slika=document.createElement("img")
+               slika.setAttribute("src","blue.jpg")
+               var parent=that.parentNode
+               parent.removeChild(that)
+               parent.appendChild(slika)
+               counter++
+               if(counter<2){
+                   pics.push("blue")
+                   access.push(parent)
+               }
+               if(counter==2){
+                   pics.push("blue")
+                   access.push(parent)
+                   check()
+               }
+           }
+           function reveal10(that) {
+               var slika=document.createElement("img")
+               slika.setAttribute("src","clock.png")
+               var parent=that.parentNode
+               parent.removeChild(that)
+               parent.appendChild(slika)
+               counter++
+               if(counter<2){
+                   pics.push("clock")
+                   access.push(that)
+               }else if(counter>=2){
+                   check(pics,access)
+               }
+           }
+           function reveal11(that) {
+               var slika=document.createElement("img")
+               slika.setAttribute("src","donut.jpg")
+               var parent=that.parentNode
+               parent.removeChild(that)
+               parent.appendChild(slika)
+               counter++
+               if(counter<2){
+                   pics.push("donut")
+                   access.push(that)
+               }else if(counter>=2){
+                   check(pics,access)
+               }
+           }
+           function reveal12(that) {
+               var slika=document.createElement("img")
+               slika.setAttribute("src","legohead.jpg")
+               var parent=that.parentNode
+               parent.removeChild(that)
+               parent.appendChild(slika)
+               counter++
+               if(counter<2){
+                   pics.push("legohead")
+                   access.push(that)
+               }else if(counter>=2){
+                   check(pics,access)
+               }
+           }
+           function reveal13(that) {
+               var slika=document.createElement("img")
+               slika.setAttribute("src","mouse.jpg")
+               var parent=that.parentNode
+               parent.removeChild(that)
+               parent.appendChild(slika)
+               counter++
+               if(counter<2){
+                   pics.push("mouse")
+                   access.push(that)
+               }else if(counter>=2){
+                   check(pics,access)
+               }
+           }
+           function reveal14(that) {
+               var slika=document.createElement("img")
+               slika.setAttribute("src","earth.png")
+               var parent=that.parentNode
+               parent.removeChild(that)
+               parent.appendChild(slika)
+               counter++
+               if(counter<2){
+                   pics.push("earth")
+                   access.push(that)
+               }else if(counter>=2){
+                   check(pics,access)
+               }
+           }
+           function reveal15(that) {
+               var slika=document.createElement("img")
+               slika.setAttribute("src","wheel.jpg")
+               var parent=that.parentNode
+               parent.removeChild(that)
+               parent.appendChild(slika)
+               var image=parent.firstChild
+               counter++
+               if(counter<2){
+                   pics.push("wheel")
+                   var parentt={
+                       "parent":that.parentNode,
+                       "child":that,
+                   }
+                   access.push(parentt)
+               }
+               if(counter==2){
+                   pics.push("wheel")
+                   var parentt={
+                       "parent":that.parentNode,
+                       "child":image,
+                   }
+                   access.push(parentt)
+                   check()
+               }
+           }
+           function reveal16(that) {
+               var slika=document.createElement("img")
+               slika.setAttribute("src","earth.png")
+               var parent=that.parentNode
+               parent.removeChild(that)
+               parent.appendChild(slika)
+               var image=parent.firstChild
+               counter++
+               if(counter<2){
+                   pics.push("earth")
+                   var parentt={
+                       "parent":that.parentNode,
+                       "child":that,
+                   }
+                   access.push(parentt)
+               }
+               if(counter==2){
+                   pics.push("earth")
+                   var parentt={
+                       "parent":that.parentNode,
+                       "child":image,
+                   }
+                   access.push(parentt)
+                   check()
+               }
+           }
+
+           function check(){
+
+            var img=document.createElement("img")
+               img.setAttribute("src","cover.png")
+               if(pics[0]!=pics[1]){
+                   console.log("NE SE ISTI")
+                   for(i=0;i<access.length;i++){
+                       var roditel=access[i].child.parentNode
+                       roditel.removeChild(access[i].child)
+                       
+                   }
+               }
+
+               pics=[]
+               access=[]
+               counter=0
+           }
+
+
+    </script>
+</head>
+<body>
+<h1>Meморија</h1>
+<div style="text-align:left; float:left">
+    <table border="1">
+        <tr>
+            <td id="11"><img onclick="reveal1(this)" src="cover.png"/></td>
+            <td id="12"><img onclick="reveal2(this)" src="cover.png"/></td>
+            <td id="13"><img onclick="reveal3(this)" src="cover.png"/></td>
+            <td id="14"><img onclick="reveal4(this)" src="cover.png"/></td>
+        </tr>
+        <tr>
+            <td id="21"><img onclick="reveal5(this)" src="cover.png"/></td>
+            <td id="22"><img onclick="reveal6(this)" src="cover.png"/></td>
+            <td id="23"><img onclick="reveal7(this)" src="cover.png"/></td>
+            <td id="24"><img onclick="reveal8(this)" src="cover.png"/></td>
+            Интернет програмирање
+        </tr>
+        <tr>
+            <td id="31"><img onclick="reveal9(this)"  src="cover.png"/></td>
+            <td id="32"><img onclick="reveal10(this)"  src="cover.png"/></td>
+            <td id="33"><img onclick="reveal11(this)"  src="cover.png"/></td>
+            <td id="34"><img onclick="reveal12(this)"  src="cover.png"/></td>
+        </tr>
+        <tr>
+            <td id="41"><img onclick="reveal13(this)"  src="cover.png"/></td>
+            <td id="42"><img onclick="reveal14(this)"  src="cover.png"/></td>
+            <td id="43"><img onclick="reveal15(this)"  src="cover.png"/></td>
+            <td id="44"><img onclick="reveal16(this)"  src="cover.png"/></td>
+        </tr>
+    </table>
+    <input type="submit" value="RESET"/>
+</div>
+<br/>
+</body>

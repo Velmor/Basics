@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadaca1</title>
+    <style>
+        #main{
+            margin-left: 475px;
+            margin-right: 475px;
+            border:black 2px solid;
+        }
+        h1,h2,h3,h4,h5,h6{
+            text-align: center;
+        }
+        label{
+            font-size: 22px;
+            margin-left: 30px;
+        }
+        input{
+            width: 30px;
+        }
+        .op{
+            margin-left: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+<script>
+ function calculate() {
+      var a=document.getElementById("number1")
+      var b=document.getElementById("number2")
+      var rezultat=document.getElementById("result")
+
+     var operation=document.getElementsByName("operation")
+     var chosenoperation
+     for(i=0;i<operation.length;i++){
+         if(operation[i].checked){
+            chosenoperation=operation[i].value
+         }
+     }
+
+     if(chosenoperation=="sobiranje"){
+         rezultat.innerHTML=parseInt(a.value)+parseInt(b.value)
+     }else if(chosenoperation=="odzemanje"){
+         rezultat.innerHTML=parseInt(a.value)-parseInt(b.value)
+     }else if(chosenoperation=="mnozenje"){
+         rezultat.innerHTML=parseInt(a.value)*parseInt(b.value)
+     }else if(chosenoperation=="delenje"){
+         rezultat.innerHTML=parseInt(a.value)/parseInt(b.value)
+     }else if(chosenoperation=="sinus" ){
+         var sinus=Math.sin(parseInt(a.value))
+         rezultat.innerHTML=sinus
+     }else if(chosenoperation=="kosinus"){
+         var kosinus=Math.cos(parseInt(a.value))
+         rezultat.innerHTML=kosinus
+     }else if(chosenoperation=="tangens"){
+         var tangens=Math.tan(parseInt(a.value))
+         rezultat.innerHTML=tangens
+     } else if(chosenoperation=="cist"){
+         var absoluten=Math.abs(parseInt(a.value))
+         rezultat.innerHTML=absoluten
+     }else if(chosenoperation=="stepen"){
+         var stepen=Math.pow(parseInt(a.value),parseInt(b.value))
+         rezultat.innerHTML=stepen
+     }else if(chosenoperation=="koren"){
+         var koren=Math.sqrt(parseInt(a.value))
+         rezultat.innerHTML=koren
+     }
+ }
+</script>
+<div id="main">
+    <h1>Calculator</h1>
+    <label>a: </label><input type="number" id="number1"><label>b: </label><input type="number" id="number2"><br><br>
+
+   <label class="op"> <input  type="radio" name="operation" value="sobiranje">a+b</label>
+    <label class="op"> <input  type="radio" name="operation" value="odzemanje">a-b</label>
+    <label class="op"> <input  type="radio" name="operation" value="mnozenje">a*b</label>
+    <label class="op"> <input  type="radio" name="operation" value="delenje">a/b</label>
+    <br>
+    <label class="op"> <input  type="radio" name="operation" value="sinus">sin(a)</label>
+    <label class="op"> <input  type="radio" name="operation" value="kosinus">cos(a)</label>
+    <label class="op"> <input  type="radio" name="operation" value="tangens">tg(a)</label>
+    <br>
+    <label class="op"> <input  type="radio" name="operation" value="cist">[a]</label>
+    <label class="op"> <input  type="radio" name="operation" value="stepen">a^b</label>
+    <label class="op"> <input  type="radio" name="operation" value="koren">root(a)</label><br><br>
+
+    <button style="margin-left: 125px;" onclick="calculate()">Calculate</button>
+    <br>
+    <label id="result"></label>
+
+
+
+</div>
+
+</body>
+</html>
